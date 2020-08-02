@@ -6,12 +6,12 @@ static int topbar = 1;                      /* -b  option; if 0, dmenu appears a
 static const char *fonts[] = {
 	"monospace:size=10"
 };
-static const char *prompt      = NULL;      /* -p  option; prompt to the left of input field */
+static const char *prompt      = "> ";      /* -p  option; prompt to the left of input field */
 static const char *colors[SchemeLast][2] = {
-	/*     fg         bg       */
-	[SchemeNorm] = { "#bbbbbb", "#222222" },
-	[SchemeSel] = { "#eeeeee", "#005577" },
-	[SchemeOut] = { "#000000", "#00ffff" },
+					/*     fg         bg       */
+	[SchemeNorm] 	= { "#fbf1c6", "#282828" },
+	[SchemeSel] 	= { "#282828", "#fbf1c7" },
+	[SchemeOut] 	= { "#000000", "#00ffff" },
 };
 /* -l option; if nonzero, dmenu uses vertical list with given number of lines */
 static unsigned int lines      = 0;
