@@ -1,2 +1,5 @@
 #!/bin/sh
-dmenu_path | dmenu -sf "#000000"| ${SHELL:-"/bin/sh"} &
+
+prog=$(dmenu_path | dmenu)
+echo $prog | ${SHELL:-"/bin/sh"}
+[[ $? == 127 ]] && (notify-send -u critical "$prog is not found")
